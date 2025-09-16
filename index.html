@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Local Password Generator</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+	<div class="container center">
+		<div class="box">
+			<h1>Password Generator</h1>
+
+			<div class="output-box">
+				<input type="text" id="password-output" class="input" readonly />
+				<button id="copy-btn" class="btn secondary">Copy</button>
+				<button id="generate-btn" class="btn primary">Generate</button>
+			</div>
+
+			<div class="strength-meter">
+				<div class="strength-bar" id="strength-bar"></div>
+			</div>
+
+			<div class="controls">
+				<div class="control-group">
+					<label for="password-length">Password Length:</label>
+					<input type="number" id="password-length" class="input" min="4" max="32" value="12" />
+				</div>
+
+				<div class="control-group">
+					<label><input type="checkbox" id="include-uppercase" checked /> Include Uppercase</label>
+					<label><input type="checkbox" id="include-lowercase" checked /> Include Lowercase</label>
+					<label><input type="checkbox" id="include-numbers" checked /> Include Numbers</label>
+					<label><input type="checkbox" id="include-symbols" checked /> Include Symbols</label>
+				</div>
+			</div>
+
+			<div class="history-controls">
+				<div class="header">
+					<h3>Password History</h3>
+				</div>
+				<div class="storage-choice">
+					<label><input type="radio" name="storage-type" value="localStorage" checked /> <span class="btn">Local Storage</span></label>
+					<label><input type="radio" name="storage-type" value="sessionStorage" /> <span class="btn">Session Storage</span></label>
+				</div>
+			</div>
+			<ul id="history-list"></ul>
+      <button id="clear-history-btn" class="btn danger">Clear History</button>
+		</div>
+	</div>
+
+<div class="links-wrapper center">
+	<div class="links">
+		<a href="https://age-calculator.idkey.in/">Age and Date Difference Calculator</a>
+		<a href="#">Quote Generator</a>
+		<a href="#">Screen Recorder</a>
+		<a href="#">"Where Am I?" Geolocation Tool</a>
+		<a href="#">Secured Password Generator</a>
+		<a href="#">What's My IP Address?</a>
+		<a href="#">Color Palette Generator from Image</a>
+	</div>
+</div>
+
+</body>
+<script src="/script.js"></script>
+</html>
